@@ -12,12 +12,10 @@ const firebaseInstance = require('./setup/firebaseSetup');
 //template viewing engine
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
-app.set('views', './views');
 
 app.use(express.static(__dirname + '/public'));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 //index route
 app.get('/', (request, response) => {
