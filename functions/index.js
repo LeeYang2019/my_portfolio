@@ -12,6 +12,7 @@ const firebaseInstance = require('./setup/firebaseSetup');
 //template viewing engine
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
+app.set('views', './views');
 
 app.use(express.static(__dirname + '/public'));
 
