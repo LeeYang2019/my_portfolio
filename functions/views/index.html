@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhialee Yang</title>
+  <base href="/">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+
+<body>
+  <header>
+    <button class="nav-toggle" aria-label="toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#home" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">About Me</a>
+        </li>
+        <li class="nav__item"><a href="#portfolio" class="nav__link">My Portfolio</a></li>
+        <li class="nav__item"><a href="#collaboration" class="nav__link">My Collaborations</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Introduction-->
+  <section class="intro" id="home">
+    <h1 class="section__titles section__title--intro">Hi, I am <strong>Nhialee Yang</strong></strong></h1>
+    <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
+    <img src="images/Nhialee2.jpg" alt="a picture of Nhialee Yang" class="intro__image">
+  </section>
+
+  <!--About Me-->
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about">Developer based out of Toronto</p>
+
+    <div class="about-me__body">
+      <p>I am a business analyst with several years of experience in IT. Having that sort of exposure has cultivated an
+        interest and a passion for software development. </p>
+      <p>I am an avid hiker with a passion for building things.</p>
+    </div>
+
+    <img src="images/nhialee.jpg" alt="Nhialee sitting at table" class="about-me__img">
+  </section>
+
+  <!--My Work-->
+  <section class="my-work" id="portfolio">
+    <h2 class="section__title">My Portfolio</h2>
+    <p class="section__subtitle section__subtitle--portfolio" id="work">A range of my work</p>
+    <div class="portfolio">
+      <!--item 1-->
+      <div class="portfolio__item">
+        <img src="https://user-images.githubusercontent.com/46943342/84425116-0c4b0d00-abef-11ea-921a-0149bbbf9015.png"
+          class="portfolio__img">
+        <div class="portfolio__item__info">
+          <h3>myTradingCards</h3>
+          <div class="portfolio_btns">
+            <a href="https://youtu.be/6cBaNtQ6cP8" class="demo_btn btn" target="_blank">View Video</a>
+            <a href="https://github.com/LeeYang2019/managingMyTradingCards" class="btn" target="_blank">View Source</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="my-work" id="collaboration">
+    <h2 class="section__title">My Collaborations</h2>
+    <p class="section__subtitle section__subtitle--collaboration" id="work">Projects I'm collaborating on</p>
+    <div class="collaboration">
+      <!--item 1-->
+      <div class="portfolio__item">
+        <img src="/images/dscrt.png" class="portfolio__img">
+        <div class="portfolio__item__info">
+          <h3>dscrt</h3>
+          <div class="portfolio_btns">
+            <a href="https://dscrt.ly" class="demo_btn btn" target="_blank">View Live</a>
+          </div>
+        </div>
+      </div>
+      <!--item 2-->
+      <div class="portfolio__item">
+        <img src="/images/codeMentoring.png" class="portfolio__img">
+        <div class="portfolio__item__info">
+          <h3>Code Mentoring</h3>
+          <div class="portfolio_btns">
+            <a href="https://codementoring.co/" class="demo_btn btn" target="_blank">View Live</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+  <footer class="footer" id="contact">
+    <a href="mailto:ny2514@gmail.com" target="blank" class="footer__link">ny2514@gmail.com</a>
+    <!-- <button id="resume_btn">View Resume</button> -->
+    <a href="viewPDF.html" target="blank" class="footer_link">View Resume</a>
+    <ul class="social-list">
+      <li class="social-list__item"><a class="social-list__link" href="https://github.com/LeeYang2019"><i
+            class="fab fa-github fa-2x"></i></a></li>
+      <li class="social-list__item"><a class="social-list__link"
+          href="https://www.facebook.com/people/Nyiajlim-Lee-Yang/8632742"><i
+            class="fab fa-facebook-square fa-2x"></i></a></li>
+      <li class="social-list__item"><a class="social-list__link"
+          href="https://www.linkedin.com/in/nhialee-yang-b07649181/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+    </ul>
+  </footer>
+  <!--axios cdn-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/getGitHub.js"></script>
+</body>
+
 </html>

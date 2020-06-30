@@ -9,4 +9,12 @@ admin.initializeApp({
   databaseURL: 'https://my-portfolio-2020-eb31a.firebaseio.com',
 });
 
+//access resume folder in storage
+function downloadResume() {
+  const storage = admin.storage();
+  const pathReference = storage.ref('resume/');
+  return pathReference;
+}
+
 module.exports.functions = functions;
+module.exports.downloadResume = downloadResume;
