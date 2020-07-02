@@ -1,3 +1,6 @@
+const init = () => {
+  //getGitRepoInformation('LeeYang2019');
+};
 
 //gets githubrepos for a given user
 async function getGitHubRepos(username) {
@@ -7,17 +10,14 @@ async function getGitHubRepos(username) {
     })
     .then((repos) => {
       console.log(repos);
-      return (
-        repos
-          .filter((repo) => repo.stargazers_count > 0)
-          .map((starRepo) => {
-
-            return starRepo;
-          })
-      );
+      return repos
+        .filter((repo) => repo.stargazers_count > 0)
+        .map((starRepo) => {
+          return starRepo;
+        });
     })
     .catch((error) => console.log(error));
-};
+}
 
 //gets the imgsrc for a given repo
 async function getImgSrcFromReadme(username, repo) {
@@ -52,7 +52,7 @@ async function getGitRepoInformation(username) {
               <div class="portfolio__item__info">
                 <h3>${repo.name}</h3>
                 <div class="portfolio_btns">
-                    <a href="${repo.homepage}" class="demo_btn btn" target="_blank">View Demo</a>
+                    <a href="${repo.homepage}" class="demo_btn btn" target="_blank">View Live</a>
                     <a href="${repo.html_url}" class="btn" target="_blank">View Source</a>
                 </div>
               </div>
@@ -63,5 +63,4 @@ async function getGitRepoInformation(username) {
   });
 }
 
-getGitRepoInformation('LeeYang2019');
-
+window.onload = init;

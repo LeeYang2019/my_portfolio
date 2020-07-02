@@ -11,7 +11,7 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #e7dfd5;
+  --clr-light: #dee2db;
   --clr-dark: #222831;
   --clr-accent: #5588a3;
 
@@ -605,4 +605,9 @@ header {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*Secret Word*/
+.secret_word {
+  color: #ffffff;
 }

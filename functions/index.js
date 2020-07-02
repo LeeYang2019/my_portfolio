@@ -18,21 +18,13 @@ app.engine('html', ejs.renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
-//index route
-app.get('/', (request, response) => {
-  response.render('index');
-});
-
 //githubRepos route
 app.get('/githubRepos/:username', (req, res) => {
-
   try {
     const options = {
-      uri: `http://api.github.com/users/${
-        req.params.username
-        }/repos?per_page=40&sort=created:asc&client_id=${githubCredentials.githubClientId}&client_secret=${githubCredentials.githubSecret}`,
+      uri: `http://api.github.com/users/${req.params.username}/repos?per_page=40&sort=created:asc&client_id=${githubCredentials.githubClientId}&client_secret=${githubCredentials.githubSecret}`,
       method: 'GET',
-      headers: { 'user-agent': 'node.js' }
+      headers: { 'user-agent': 'node.js' },
     };
 
     request(options, (error, response, body) => {
@@ -48,14 +40,13 @@ app.get('/githubRepos/:username', (req, res) => {
   }
 });
 
-//githubRepos route
+//githubRepos repo route
 app.get('/githubRepos/:username/:repo', (req, res) => {
-
   try {
     const options = {
       uri: `https://api.github.com/repos/${req.params.username}/${req.params.repo}/readme`,
       method: 'GET',
-      headers: { 'user-agent': 'node.js' }
+      headers: { 'user-agent': 'node.js' },
     };
 
     request(options, (error, response, body) => {
@@ -69,6 +60,11 @@ app.get('/githubRepos/:username/:repo', (req, res) => {
     console.error(err.message);
     res.status(500).send('Server Error');
   }
+});
+
+//index route
+app.get('/', (request, response) => {
+  response.render('index');
 });
 
 exports.app = firebaseInstance.functions.https.onRequest(app);
