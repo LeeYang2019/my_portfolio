@@ -1,5 +1,5 @@
 const init = () => {
-  //getGitRepoInformation('LeeYang2019');
+  getGitRepoInformation('LeeYang2019');
 };
 
 //gets githubrepos for a given user
